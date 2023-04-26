@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <p> Click on the button to add 12 months to the current date (MM/DD/YYYY).</p>
+      <button onclick="add()">Click Me</button>
+      <p id="currentTime">Current Date : </p>
+      <p id="updatedTime">Updated Date: </p>
+      <script>
+         // Code the show current time
+         let ct = document.getElementById("currentTime")
+         let currentDate = Date.now();
+         ct.innerText += new Date(currentDate).toLocaleDateString()
+         
+         // Code to add 12 Months to current Time
+         let ut = document.getElementById("updatedTime")
+         function add() {
+            let dt = new Date();
+            let no_of_months = 12;
+            dt.setMonth(dt.getMonth() + no_of_months)
+            ut.innerText += dt.toLocaleDateString();
+         }
+      </script>
+   </body>
+</html>
+ 
+
+
